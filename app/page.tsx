@@ -114,16 +114,16 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="relative bg-ink px-6 pb-20 pt-16 text-[var(--color-cream)] md:px-12 lg:px-20">
+      <section className="relative overflow-hidden bg-ink px-6 pb-20 pt-16 text-[var(--color-cream)] md:px-12 lg:px-20">
         <div
-          className="absolute inset-0 opacity-10"
+          className="absolute inset-0 z-0 opacity-10"
           style={{
             backgroundImage: "var(--hero-image)",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         />
-        <div className="relative mx-auto max-w-3xl text-center">
+        <div className="relative z-20 mx-auto max-w-3xl text-center">
           <div className="mb-6">
             <span className="section-number">Jueves Santo</span>
           </div>
@@ -143,8 +143,8 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="pointer-events-none absolute bottom-0 right-0 z-10 origin-bottom-right translate-x-1/3 translate-y-1/3 max-[480px]:scale-[0.55] md:translate-x-1/4 md:translate-y-1/4">
-          <ScrollCircle />
+        <div className="pointer-events-none absolute -bottom-28 -right-28 z-10 md:-bottom-24 md:-right-24">
+          <ScrollCircle size={380} />
         </div>
       </section>
 
