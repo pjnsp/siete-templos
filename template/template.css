@@ -1,0 +1,97 @@
+/* ============================================
+   TAILWIND PLAY — CSS PANEL
+   Paste this entire block into the CSS tab
+   ============================================ */
+
+   @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+
+   @tailwind base;
+   @tailwind components;
+   @tailwind utilities;
+   
+   @layer base {
+     :root {
+       --color-cream: #FAF8F3;
+       --color-ink: #1A1A18;
+       --color-gold: #C5A55A;
+       --color-burgundy: #5C1A1A;
+       --color-warm-gray: #B5B0A6;
+       --color-rule: #D6D1C7;
+       --hero-image: none;
+       --font-display: 'Cormorant Garant', 'Georgia', serif;
+       --font-body: 'Crimson Pro', 'Georgia', serif;
+     }
+     html { scroll-behavior: smooth; }
+     body {
+       font-family: var(--font-body);
+       background-color: var(--color-cream);
+       color: var(--color-ink);
+       -webkit-font-smoothing: antialiased;
+     }
+   }
+   
+   @layer components {
+     .section-number {
+       font-family: var(--font-display); font-weight: 300;
+       font-size: 0.875rem; letter-spacing: 0.15em;
+       text-transform: uppercase; color: var(--color-gold);
+     }
+     .rule-gold { border: none; height: 1px; background-color: var(--color-gold); opacity: 0.4; }
+     .rule-ink { border: none; height: 1px; background-color: var(--color-rule); }
+     .heading-display {
+       font-family: var(--font-display); font-weight: 600;
+       line-height: 1.1; letter-spacing: -0.01em; color: var(--color-ink);
+     }
+     .heading-sub {
+       font-family: var(--font-display); font-weight: 300;
+       font-style: italic; color: var(--color-warm-gray);
+     }
+     .station { border-left: 2px solid var(--color-gold); padding-left: 1.5rem; }
+     .station-label {
+       display: inline-block; font-family: var(--font-display);
+       font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em;
+       text-transform: uppercase; color: var(--color-gold);
+       border: 1px solid var(--color-gold); padding: 0.15rem 0.6rem;
+     }
+     .meditation-text {
+       font-family: var(--font-body); font-size: 1.05rem;
+       line-height: 1.85; color: var(--color-ink);
+     }
+     .prayer-text {
+       font-family: var(--font-display); font-weight: 400;
+       font-style: italic; font-size: 1.15rem;
+       line-height: 1.75; color: var(--color-burgundy);
+     }
+     .pater-noster {
+       font-family: var(--font-display); font-weight: 600;
+       font-size: 0.8rem; letter-spacing: 0.15em;
+       text-transform: uppercase; color: var(--color-gold);
+     }
+     .toc-link {
+       font-family: var(--font-display); display: flex;
+       align-items: baseline; gap: 1rem; padding: 0.6rem 0;
+       border-bottom: 1px solid var(--color-rule);
+       text-decoration: none; color: var(--color-ink);
+       transition: color 0.2s ease;
+     }
+     .toc-link:hover { color: var(--color-burgundy); }
+     .toc-link:hover .toc-numeral { color: var(--color-burgundy); }
+     .toc-numeral {
+       font-weight: 300; font-size: 1.1rem; color: var(--color-gold);
+       min-width: 2rem; transition: color 0.2s ease;
+     }
+     .toc-title { font-weight: 400; font-size: 1.05rem; }
+   }
+   
+   @layer utilities {
+     .font-display { font-family: var(--font-display); }
+     .font-body { font-family: var(--font-body); }
+     .text-gold { color: var(--color-gold); }
+     .text-burgundy { color: var(--color-burgundy); }
+     .text-warm-gray { color: var(--color-warm-gray); }
+     .text-ink { color: var(--color-ink); }
+     .bg-cream { background-color: var(--color-cream); }
+     .bg-ink { background-color: var(--color-ink); }
+     .border-rule { border-color: var(--color-rule); }
+   }
+   

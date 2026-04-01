@@ -1,26 +1,206 @@
+/* Component/theme styles synced from template/template.html */
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-cream: #faf8f3;
+  --color-ink: #1a1a18;
+  --color-gold: #c5a55a;
+  --color-gold-light: #d4bc7c;
+  --color-burgundy: #5c1a1a;
+  --color-warm-gray: #b5b0a6;
+  --color-rule: #d6d1c7;
+  --color-parchment: #f3ede4;
+  --hero-image: none;
+  --font-display: var(--font-cormorant-garamond), Georgia, serif;
+  --font-body: var(--font-crimson-pro), Georgia, serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  overflow-x: clip;
+}
+
+/* ── Components ── */
+.section-number {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: 0.875rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.rule-gold {
+  border: none;
+  height: 1px;
+  background-color: var(--color-gold);
+  opacity: 0.4;
+}
+
+.rule-ink {
+  border: none;
+  height: 1px;
+  background-color: var(--color-rule);
+}
+
+.heading-display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--color-ink);
+}
+
+.heading-sub {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--color-warm-gray);
+}
+
+/* Prayer station */
+.station {
+  scroll-margin-top: 2rem;
+}
+
+.station-numeral {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--color-gold);
+  opacity: 0.5;
+}
+
+.station-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  color: var(--color-ink);
+}
+
+.station-subtitle {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--color-warm-gray);
+}
+
+.label-meditation {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.label-prayer {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-burgundy);
+}
+
+.prayer-text {
+  font-family: var(--font-body);
+  font-style: italic;
+  line-height: 1.85;
+  color: var(--color-ink);
+}
+
+.meditation-text {
+  font-family: var(--font-body);
+  line-height: 1.85;
+  color: var(--color-ink);
+}
+
+.padrenuestro-note {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: var(--color-warm-gray);
+  letter-spacing: 0.05em;
+}
+
+/* Navigation pill for mobile */
+.nav-pill {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--color-warm-gray);
+  border: 1px solid var(--color-rule);
+  padding: 0.35rem 0.85rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav-pill:hover {
+  color: var(--color-gold);
+  border-color: var(--color-gold);
+}
+
+/* Cross ornament */
+.ornament-cross {
+  color: var(--color-gold);
+  opacity: 0.5;
+}
+
+/* Utilities */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.text-gold {
+  color: var(--color-gold);
+}
+
+.text-burgundy {
+  color: var(--color-burgundy);
+}
+
+.text-warm-gray {
+  color: var(--color-warm-gray);
+}
+
+.text-ink {
+  color: var(--color-ink);
+}
+
+.bg-cream {
+  background-color: var(--color-cream);
+}
+
+.bg-ink {
+  background-color: var(--color-ink);
+}
+
+.bg-parchment {
+  background-color: var(--color-parchment);
+}
+
+.border-gold {
+  border-color: var(--color-gold);
+}
+
+.border-rule {
+  border-color: var(--color-rule);
 }

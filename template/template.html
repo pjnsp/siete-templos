@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visita de las Siete Iglesias — Jueves Santo</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --color-cream: #FAF8F3;
+    --color-ink: #1A1A18;
+    --color-gold: #C5A55A;
+    --color-gold-light: #D4BC7C;
+    --color-burgundy: #5C1A1A;
+    --color-warm-gray: #B5B0A6;
+    --color-rule: #D6D1C7;
+    --color-parchment: #F3EDE4;
+    --hero-image: none;
+    --font-display: 'Cormorant Garant', 'Georgia', serif;
+    --font-body: 'Crimson Pro', 'Georgia', serif;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+  }
+
+  /* ── Components ── */
+  .section-number {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: 0.875rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+  }
+  .rule-gold {
+    border: none; height: 1px;
+    background-color: var(--color-gold); opacity: 0.4;
+  }
+  .rule-ink {
+    border: none; height: 1px;
+    background-color: var(--color-rule);
+  }
+  .heading-display {
+    font-family: var(--font-display);
+    font-weight: 600; line-height: 1.1;
+    letter-spacing: -0.01em;
+    color: var(--color-ink);
+  }
+  .heading-sub {
+    font-family: var(--font-display);
+    font-weight: 300; font-style: italic;
+    color: var(--color-warm-gray);
+  }
+
+  /* Prayer station */
+  .station {
+    scroll-margin-top: 2rem;
+  }
+  .station-numeral {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: 4rem;
+    line-height: 1;
+    color: var(--color-gold);
+    opacity: 0.5;
+  }
+  .station-title {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.75rem;
+    line-height: 1.2;
+    color: var(--color-ink);
+  }
+  .station-subtitle {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--color-warm-gray);
+  }
+  .label-meditation {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+  }
+  .label-prayer {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-burgundy);
+  }
+  .prayer-text {
+    font-family: var(--font-body);
+    font-style: italic;
+    line-height: 1.85;
+    color: var(--color-ink);
+  }
+  .meditation-text {
+    font-family: var(--font-body);
+    line-height: 1.85;
+    color: var(--color-ink);
+  }
+  .padrenuestro-note {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 0.95rem;
+    color: var(--color-warm-gray);
+    letter-spacing: 0.05em;
+  }
+
+  /* Navigation pill for mobile */
+  .nav-pill {
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--color-warm-gray);
+    border: 1px solid var(--color-rule);
+    padding: 0.35rem 0.85rem;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .nav-pill:hover {
+    color: var(--color-gold);
+    border-color: var(--color-gold);
+  }
+
+  /* Cross ornament */
+  .ornament-cross { color: var(--color-gold); opacity: 0.5; }
+
+  /* Utilities */
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+  .text-gold { color: var(--color-gold); }
+  .text-burgundy { color: var(--color-burgundy); }
+  .text-warm-gray { color: var(--color-warm-gray); }
+  .text-ink { color: var(--color-ink); }
+  .bg-cream { background-color: var(--color-cream); }
+  .bg-ink { background-color: var(--color-ink); }
+  .bg-parchment { background-color: var(--color-parchment); }
+  .border-gold { border-color: var(--color-gold); }
+  .border-rule { border-color: var(--color-rule); }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     HEADER
+     ═══════════════════════════════════════════ -->
+<header class="bg-ink text-[var(--color-cream)] px-6 md:px-12 lg:px-20 py-5">
+  <div class="max-w-3xl mx-auto flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <svg class="w-5 h-5 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M12 2v20M5 8h14" stroke-linecap="round"/>
+      </svg>
+      <span class="font-display text-sm tracking-[0.15em] uppercase">Devocionario</span>
+    </div>
+    <span class="font-display text-sm tracking-wider text-[var(--color-warm-gray)]">Jueves Santo</span>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════
+     HERO
+     ═══════════════════════════════════════════ -->
+<section class="relative bg-ink text-[var(--color-cream)] px-6 md:px-12 lg:px-20 pt-16 pb-20 overflow-hidden">
+  <div class="absolute inset-0 opacity-10"
+       style="background-image: var(--hero-image); background-size: cover; background-position: center;"></div>
+  <div class="relative max-w-3xl mx-auto text-center">
+    <div class="mb-6">
+      <span class="section-number">Jueves Santo</span>
+    </div>
+    <h1 class="heading-display text-5xl md:text-7xl mb-6" style="color: var(--color-cream);">
+      Visita de las<br>
+      <span class="text-gold italic font-light">Siete Iglesias</span>
+    </h1>
+    <hr class="rule-gold max-w-[3rem] mx-auto mb-8">
+    <p class="font-body text-lg md:text-xl max-w-xl mx-auto leading-relaxed text-[var(--color-warm-gray)] font-light">
+      Devoción iniciada por San Felipe Neri en Roma para acompañar a Cristo
+      en su Pasión, agradecer el don de la Eucaristía y del sacerdocio,
+      y orar ante el Santísimo Sacramento.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     NAV — Station quick-links
+     ═══════════════════════════════════════════ -->
+<nav class="px-6 md:px-12 lg:px-20 py-6 border-b border-rule overflow-x-auto">
+  <div class="max-w-3xl mx-auto flex gap-3 justify-center flex-wrap">
+    <a href="#iglesia-1" class="nav-pill">I</a>
+    <a href="#iglesia-2" class="nav-pill">II</a>
+    <a href="#iglesia-3" class="nav-pill">III</a>
+    <a href="#iglesia-4" class="nav-pill">IV</a>
+    <a href="#iglesia-5" class="nav-pill">V</a>
+    <a href="#iglesia-6" class="nav-pill">VI</a>
+    <a href="#iglesia-7" class="nav-pill">VII</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════
+     OPENING PRAYER
+     ═══════════════════════════════════════════ -->
+<section class="px-6 md:px-12 lg:px-20 py-16">
+  <div class="max-w-3xl mx-auto text-center">
+    <span class="label-prayer">Oración inicial</span>
+
+    <svg class="w-6 h-6 ornament-cross mx-auto mt-6 mb-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+      <path d="M12 2v20M5 8h14" stroke-linecap="round"/>
+    </svg>
+
+    <p class="font-display text-xl md:text-2xl leading-relaxed font-light italic text-[var(--color-ink)] max-w-2xl mx-auto">
+      Señor Jesús, en esta noche santa en que quisiste quedarte
+      con nosotros en el Sacramento del Altar, te acompañamos
+      en oración visitando estos templos. Abre nuestros corazones
+      para contemplar tu amor y tu entrega.
+    </p>
+
+    <p class="font-display text-base text-[var(--color-warm-gray)] font-light mt-8">
+      Se recomienda guardar silencio entre cada estación.
+    </p>
+  </div>
+</section>
+
+<hr class="rule-gold max-w-3xl mx-auto">
+
+<!-- ═══════════════════════════════════════════
+     STATION I
+     ═══════════════════════════════════════════ -->
+<article id="iglesia-1" class="station px-6 md:px-12 lg:px-20 py-16">
+  <div class="max-w-3xl mx-auto">
+
+    <div class="flex items-start gap-5 mb-8">
+      <span class="station-numeral">I</span>
+      <div class="pt-2">
+        <h2 class="station-title">Primera Iglesia</h2>
+        <p class="station-subtitle text-lg mt-1">Jesús en el Huerto de Getsemaní</p>
+      </div>
+    </div>
+
+    <div class="mb-8">
+      <span class="label-meditation">Meditación</span>
+      <p class="meditation-text mt-3">
+        Cerca de las diez de la noche, Jesús llega al Huerto de los Olivos. Su alma se llena de una tristeza inmensa al contemplar los sufrimientos que se avecinan y la ingratitud de tantos hombres. Durante horas ora con lágrimas, y su sudor se convierte en gotas de sangre que caen sobre la tierra. Allí llega Judas, quien con un beso lo señala y lo entrega a los que vienen a aprehenderlo. Pero más que la traición de Judas, fue su amor por cada uno de nosotros lo que lo entregó.
+      </p>
+    </div>
+
+    <div class="bg-parchment p-6 md:p-8">
+      <span class="label-prayer">Oración</span>
+      <p class="prayer-text mt-3">
+        Te compadecemos, Señor Jesús, y te damos gracias por cuanto sufriste en la oración del Huerto para nuestra salvación. Nos duele la traición con que fuiste apresado. Te pedimos fortaleza en nuestras pruebas y el don de perseverar en la oración.
+      </p>
+      <p class="padrenuestro-note mt-6 text-center">Se rezan 3 Padrenuestros</p>
+    </div>
+
+  </div>
+</article>
+
+<hr class="rule-ink max-w-3xl mx-auto">
+
+<!-- ═══════════════════════════════════════════
+     STATION II
+     ═══════════════════════════════════════════ -->
+<article id="iglesia-2" class="station px-6 md:px-12 lg:px-20 py-16">
+  <div class="max-w-3xl mx-auto">
+
+    <div class="flex items-start gap-5 mb-8">
+      <span class="station-numeral">II</span>
+      <div class="pt-2">
+        <h2 class="station-title">Segunda Iglesia</h2>
+        <p class="station-subtitle text-lg mt-1">Jesús ante Anás</p>
+      </div>
+    </div>
+
+    <div class="mb-8">
+      <span class="label-meditation">Meditación</span>
+      <p class="meditation-text mt-3">
+        Jesús es llevado maniatado como un criminal ante Anás, quien lo interroga sobre sus discípulos y su enseñanza. El Señor responde con serenidad y firmeza: que pregunten a quienes lo escucharon, pues Él siempre habló públicamente. Un guardia, ofendido por la respuesta, le da una bofetada. Jesús la recibe con mansedumbre.
+      </p>
+    </div>
+
+    <div class="bg-parchment p-6 md:p-8">
+      <span class="label-prayer">Oración</span>
+      <p class="prayer-text mt-3">
+        Señor Jesús, te compadecemos y te damos gracias por la humillación que sufriste al ser golpeado injustamente. Concédenos hablar siempre con verdad y serenidad, y respetar a quienes se dirigen a nosotros.
+      </p>
+      <p class="padrenuestro-note mt-6 text-center">Se rezan 3 Padrenuestros</p>
+    </div>
+
+  </div>
+</article>
+
+<hr class="rule-ink max-w-3xl mx-auto">
+
+<!-- ═══════════════════════════════════════════
+     STATION III
+     ═══════════════════════════════════════════ -->
+<article id="iglesia-3" class="station px-6 md:px-12 lg:px-20 py-16">
+  <div class="max-w-3xl mx-auto">
+
+    <div class="flex items-start gap-5 mb-8">
+      <span class="station-numeral">III</span>
+      <div class="pt-2">
+        <h2 class="station-title">Tercera Iglesia</h2>
+        <p class="station-subtitle text-lg mt-1">Jesús ante Caifás</p>
+      </div>
+    </div>
+
+    <div class="mb-8">
+      <span class="label-meditation">Meditación</span>
+      <p class="meditation-text mt-3">
+        Ante el sumo sacerdote, Jesús escucha cómo tergiversan sus palabras y presentan testimonios falsos en su contra. Lo retan a proclamar que es el Hijo de Dios, pero sin voluntad de reconocerlo. Pedro, entre tanto, lo niega tres veces. El tribunal lo declara reo de muerte. La verdad es aplastada por la mentira.
+      </p>
+    </div>
+
+    <div class="bg-parchment p-6 md:p-8">
+      <span class="label-prayer">Oración</span>
+      <p class="prayer-text mt-3">
+        Señor Jesús, Tú eres la Verdad, y sin embargo la mentira se acumula para silenciarte. Dijiste que la verdad nos haría libres, pero vemos cómo la falsedad nos esclaviza. Nos llamaste amigos, y con qué facilidad te negamos. Te compadecemos por estas traiciones y te pedimos la gracia de ser testigos valientes de tu amor.
+      </p>
+      <p class="padrenuestro-note mt-6 text-center">Se rezan 3 Padrenuestros</p>
+    </div>
+
+  </div>
+</article>
+
+<hr class="rule-ink max-w-3xl mx-auto">
+
+<!-- ═══════════════════════════════════════════
+     STATION IV
+     ═══════════════════════════════════════════ -->
+<article id="iglesia-4" class="station px-6 md:px-12 lg:px-20 py-16">
+  <div class="max-w-3xl mx-auto">
+
+    <div class="flex items-start gap-5 mb-8">
+      <span class="station-numeral">IV</span>
+      <div class="pt-2">
+        <h2 class="station-title">Cuarta Iglesia</h2>
+        <p class="station-subtitle text-lg mt-1">Jesús ante Pilato</p>
+      </div>
+    </div>
+
+    <div class="mb-8">
+      <span class="label-meditation">Meditación</span>
+      <p class="meditation-text mt-3">
+        Jesús es acusado ante Pilato de alborotador, de prohibir el tributo al César y de proclamarse rey. Pero Él anuncia que su Reino no es de este mundo y que todo el que busca la verdad escucha su voz. Pilato no encuentra delito en Él, pero cede ante la presión de la multitud que pide su muerte.
+      </p>
+    </div>
+
+    <div class="bg-parchment p-6 md:p-8">
+      <span class="label-prayer">Oración</span>
+      <p class="prayer-text mt-3">
+        Señor Jesús, te proclamamos Rey de la Verdad, de la Vida y del Amor. Te compadecemos por las calumnias con que te acusan y la ceguera con que tuercen tus palabras. Limpia nuestros labios y corazones, y haz que nuestras vidas den testimonio de Ti.
+      </p>
+      <p class="padrenuestro-note mt-6 text-center">Se rezan 3 Padrenuestros</p>
+    </div>
+
+  </div>
+</article>
+
+<hr class="rule-ink max-w-3xl mx-auto">
+
+<!-- ═══════════════════════════════════════════
+     STATION V
+     ═══════════════════════════════════════════ -->
+<article id="iglesia-5" class="station px-6 md:px-12 lg:px-20 py-16">
+  <div class="max-w-3xl mx-auto">
+
+    <div class="flex items-start gap-5 mb-8">
+      <span class="station-numeral">V</span>
+      <div class="pt-2">
+        <h2 class="station-title">Quinta Iglesia</h2>
+        <p class="station-subtitle text-lg mt-1">Jesús ante Herodes</p>
+      </div>
+    </div>
+
+    <div class="mb-8">
+      <span class="label-meditation">Meditación</span>
+      <p class="meditation-text mt-3">
+        Herodes se alegra de ver a Jesús, pero su interés es superficial: espera presenciar algún prodigio, como quien busca entretenimiento. Le hace muchas preguntas, pero Jesús guarda silencio. Ante esa respuesta, Herodes lo desprecia y se burla de Él, revistiéndolo con una túnica blanca.
+      </p>
+    </div>
+
+    <div class="bg-parchment p-6 md:p-8">
+      <span class="label-prayer">Oración</span>
+      <p class="prayer-text mt-3">
+        Señor Jesús, Sabiduría del Padre, ante la vana curiosidad de Herodes guardas silencio. Por Ti los sencillos y humildes contemplaron el poder de Dios. Te agradecemos la lección que nos das, te compadecemos por el ultraje que sufres y te pedimos la gracia de saber hablar y callar oportunamente.
+      </p>
+      <p class="padrenuestro-note mt-6 text-center">Se rezan 3 Padrenuestros</p>
+    </div>
+
+  </div>
+</article>
+
+<hr class="rule-ink max-w-3xl mx-auto">
+
+<!-- ═══════════════════════════════════════════
+     STATION VI
+     ═══════════════════════════════════════════ -->
+<article id="iglesia-6" class="station px-6 md:px-12 lg:px-20 py-16">
+  <div class="max-w-3xl mx-auto">
+
+    <div class="flex items-start gap-5 mb-8">
+      <span class="station-numeral">VI</span>
+      <div class="pt-2">
+        <h2 class="station-title">Sexta Iglesia</h2>
+        <p class="station-subtitle text-lg mt-1">Jesús condenado por Pilato</p>
+      </div>
+    </div>
+
+    <div class="mb-8">
+      <span class="label-meditation">Meditación</span>
+      <p class="meditation-text mt-3">
+        De vuelta con Pilato, este reconoce que Jesús no ha cometido delito alguno y quiere dejarlo libre. Pero claudica ante la presión de quienes han decidido acabar con Él porque su vida y sus enseñanzas les resultan incómodas. Jesús es condenado a morir en la cruz, azotado y coronado con espinas.
+      </p>
+    </div>
+
+    <div class="bg-parchment p-6 md:p-8">
+      <span class="label-prayer">Oración</span>
+      <p class="prayer-text mt-3">
+        Señor Jesús, te compadecemos por las injusticias de este proceso en el que también nosotros metimos las manos. Compadecemos en Ti a todos los que por ser fieles a la verdad y a la causa de Dios son tratados injustamente. Te pedimos la gracia de la piedad divina ante nuestras propias injusticias.
+      </p>
+      <p class="padrenuestro-note mt-6 text-center">Se rezan 3 Padrenuestros</p>
+    </div>
+
+  </div>
+</article>
+
+<hr class="rule-ink max-w-3xl mx-auto">
+
+<!-- ═══════════════════════════════════════════
+     STATION VII
+     ═══════════════════════════════════════════ -->
+<article id="iglesia-7" class="station px-6 md:px-12 lg:px-20 py-16">
+  <div class="max-w-3xl mx-auto">
+
+    <div class="flex items-start gap-5 mb-8">
+      <span class="station-numeral">VII</span>
+      <div class="pt-2">
+        <h2 class="station-title">Séptima Iglesia</h2>
+        <p class="station-subtitle text-lg mt-1">Jesús en el Santo Sepulcro</p>
+      </div>
+    </div>
+
+    <div class="mb-8">
+      <span class="label-meditation">Meditación</span>
+      <p class="meditation-text mt-3">
+        Jesús ha muerto en la cruz entre dolores indecibles, burlas y desprecios, sintiéndose abandonado hasta por su Padre. Su Madre y los pocos amigos fieles que lo acompañaron no pudieron evitarlo. Unos amigos lo sepultan con piedad. Se han cumplido las Escrituras. Ahora toca esperar al tercer día, porque Él, poderoso en obras y palabras, prometió que resucitaría.
+      </p>
+    </div>
+
+    <div class="bg-parchment p-6 md:p-8">
+      <span class="label-prayer">Oración</span>
+      <p class="prayer-text mt-3">
+        Señor Jesús, te acompañaremos en silencio durante estos días, esperando que tu Palabra germine en nuestros corazones y contigo resucitemos como hombres y mujeres nuevos. Gracias, Padre Dios, porque Tú siempre escuchaste a tu Hijo y lo resucitaste, vencedor de su muerte y de la nuestra.
+      </p>
+      <p class="padrenuestro-note mt-6 text-center">Se rezan 3 Padrenuestros</p>
+    </div>
+
+  </div>
+</article>
+
+<!-- ═══════════════════════════════════════════
+     CLOSING
+     ═══════════════════════════════════════════ -->
+<section class="bg-ink text-[var(--color-cream)] px-6 md:px-12 lg:px-20 py-16">
+  <div class="max-w-3xl mx-auto text-center">
+    <svg class="w-6 h-6 ornament-cross mx-auto mb-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+      <path d="M12 2v20M5 8h14" stroke-linecap="round"/>
+    </svg>
+    <p class="font-display text-xl md:text-2xl leading-relaxed font-light italic text-[var(--color-warm-gray)] max-w-2xl mx-auto">
+      «Velen y oren para no caer en tentación;
+      el espíritu está dispuesto, pero la carne es débil.»
+    </p>
+    <p class="font-display text-base text-[var(--color-warm-gray)] mt-4 font-light">
+      — Mt 26, 41
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════ -->
+<footer class="bg-ink text-[var(--color-cream)] px-6 md:px-12 lg:px-20 py-8 border-t border-[var(--color-warm-gray)] border-opacity-20">
+  <div class="max-w-3xl mx-auto text-center">
+    <p class="text-sm text-[var(--color-warm-gray)]">
+      Oraciones basadas en la guía publicada por
+      <a href="https://www.aciprensa.com/noticias/54951/guia-de-oracion-para-visitar-las-7-iglesias-en-semana-santa"
+         class="underline hover:text-gold transition-colors" target="_blank" rel="noopener">
+        ACI Prensa
+      </a>
+    </p>
+    <p class="text-xs text-[var(--color-warm-gray)] opacity-60 mt-2">
+      Pastoral Juvenil · Parroquia Nuestra Señora de la Paz · Ciudad Juárez
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
