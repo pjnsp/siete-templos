@@ -14,12 +14,10 @@ export function DevotionalHeader() {
             <path d="M12 2v20M5 8h14" strokeLinecap="round" />
           </svg>
           <span className="font-display text-sm uppercase tracking-[0.15em]">
-            Devocionario
+            Pastoral Juvenil
           </span>
         </div>
-        <span className="font-display text-sm tracking-wider text-[var(--color-warm-gray)]">
-          Jueves Santo
-        </span>
+        <span className="font-display text-sm tracking-wider text-[var(--color-warm-gray)]">Nuestra Señora de la Paz</span>
       </div>
     </header>
   );
