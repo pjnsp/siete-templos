@@ -14,9 +14,9 @@ export const stations: Station[] = [
     title: "Primera Iglesia",
     subtitle: "Jesús en el Huerto de Getsemaní",
     meditation:
-      "Cerca de las diez de la noche, Jesús llega al Huerto de los Olivos. Su alma se llena de una tristeza inmensa al contemplar los sufrimientos que se avecinan y la ingratitud de tantos hombres. Durante horas ora con lágrimas, y su sudor se convierte en gotas de sangre que caen sobre la tierra. Allí llega Judas, quien con un beso lo señala y lo entrega a los que vienen a aprehenderlo. Pero más que la traición de Judas, fue su amor por cada uno de nosotros lo que lo entregó.",
+      "Serían como las 10 de la noche cuando Jesús llegó al Huerto de Getsemaní. Su alma se llenó de tristeza, entró en agonía ante la visión de los sufrimientos que se le venían encima y la ingratitud de la humanidad. Oró por unas tres horas con lágrimas y sudor de sangre, cuyas gotas cayeron en tierra. Aquí llegó Judas y con un beso lo entregó a quienes vinieron a aprehenderle, aunque más bien fue su amor a ti el que le entregó.",
     prayer:
-      "Te compadecemos, Señor Jesús, y te damos gracias por cuanto sufriste en la oración del Huerto para nuestra salvación. Nos duele la traición con que fuiste apresado. Te pedimos fortaleza en nuestras pruebas y el don de perseverar en la oración.",
+      "Te compadecemos, Jesús, y te damos gracias por lo que sufriste por nuestra salvación en la Oración del Huerto. Nos duele la traición y alevosía con que fuiste hecho preso. Concédenos fortaleza en nuestros sufrimientos y danos el don de la oración.",
   },
   {
     id: "iglesia-2",
@@ -24,9 +24,9 @@ export const stations: Station[] = [
     title: "Segunda Iglesia",
     subtitle: "Jesús ante Anás",
     meditation:
-      "Jesús es llevado maniatado como un criminal ante Anás, quien lo interroga sobre sus discípulos y su enseñanza. El Señor responde con serenidad y firmeza: que pregunten a quienes lo escucharon, pues Él siempre habló públicamente. Un guardia, ofendido por la respuesta, le da una bofetada. Jesús la recibe con mansedumbre.",
+      "Jesús, maniatado como un vulgar malhechor, interrogado por Anás sobre sus discípulos y doctrina, responde con entereza y mansedumbre que pregunte a quienes le han escuchado y que saben bien lo que Él ha dicho y enseñado. Un guardián le dio una bofetada que de seguro lo hizo tambalearse.",
     prayer:
-      "Señor Jesús, te compadecemos y te damos gracias por la humillación que sufriste al ser golpeado injustamente. Concédenos hablar siempre con verdad y serenidad, y respetar a quienes se dirigen a nosotros.",
+      "Jesús, te compadecemos; te damos gracias por la injusta humillación que sufriste al ser abofeteado. Te pedimos que nos ayudes a hablar con verdad, serenidad y educación y a respetar a nuestros interlocutores.",
   },
   {
     id: "iglesia-3",
@@ -34,9 +34,9 @@ export const stations: Station[] = [
     title: "Tercera Iglesia",
     subtitle: "Jesús ante Caifás",
     meditation:
-      "Ante el sumo sacerdote, Jesús escucha cómo tergiversan sus palabras y presentan testimonios falsos en su contra. Lo retan a proclamar que es el Hijo de Dios, pero sin voluntad de reconocerlo. Pedro, entre tanto, lo niega tres veces. El tribunal lo declara reo de muerte. La verdad es aplastada por la mentira.",
+      "Aquí Jesús tiene que oír cómo se tergiversan sus doctrinas. Cómo se aducen falsos testimonios en su contra. Cómo se le reta a proclamar que es Hijo de Dios, pero sin intención de reconocerle. Cómo Pedro niega conocerle. Cómo lo declaran reo de muerte.",
     prayer:
-      "Señor Jesús, Tú eres la Verdad, y sin embargo la mentira se acumula para silenciarte. Dijiste que la verdad nos haría libres, pero vemos cómo la falsedad nos esclaviza. Nos llamaste amigos, y con qué facilidad te negamos. Te compadecemos por estas traiciones y te pedimos la gracia de ser testigos valientes de tu amor.",
+      "Jesús, Tú eres la verdad y se amontonan mentiras para callarte. Has dicho: \"la verdad los hará libres\", pero tienes que ver cómo la mentira nos esclaviza. Has dicho: \"ustedes son mis amigos\", y con qué facilidad te negamos. En Ti somos hijos de Dios, y qué pobreza la de nuestra vida. Te compadecemos, Jesús, por esas traiciones y te pedimos la gracia de ser tus testigos valientes, fieles a tu amor.",
   },
   {
     id: "iglesia-4",
@@ -44,9 +44,9 @@ export const stations: Station[] = [
     title: "Cuarta Iglesia",
     subtitle: "Jesús ante Pilato",
     meditation:
-      "Jesús es acusado ante Pilato de alborotador, de prohibir el tributo al César y de proclamarse rey. Pero Él anuncia que su Reino no es de este mundo y que todo el que busca la verdad escucha su voz. Pilato no encuentra delito en Él, pero cede ante la presión de la multitud que pide su muerte.",
+      "Jesús es acusado ante Pilato de malhechor, alborotador del pueblo, que prohíbe pagar el tributo al César y que se proclama rey. Pero Él también anuncia que todo el que es de la verdad escucha su voz. Lo que piden es que sea condenado a muerte.",
     prayer:
-      "Señor Jesús, te proclamamos Rey de la Verdad, de la Vida y del Amor. Te compadecemos por las calumnias con que te acusan y la ceguera con que tuercen tus palabras. Limpia nuestros labios y corazones, y haz que nuestras vidas den testimonio de Ti.",
+      "Jesús, te proclamamos Cristo Rey, porque eres el único Rey de la Verdad, de la Vida y del Amor. Te compadecemos por la tristeza que tiene que darte el descaro con que te calumnian y por la ceguera con que juegan con las palabras salidas de tu boca. Te pedimos que limpies estos labios y estos corazones con los que te recibimos, y que nuestras vidas den testimonio de Ti.",
   },
   {
     id: "iglesia-5",
@@ -54,9 +54,9 @@ export const stations: Station[] = [
     title: "Quinta Iglesia",
     subtitle: "Jesús ante Herodes",
     meditation:
-      "Herodes se alegra de ver a Jesús, pero su interés es superficial: espera presenciar algún prodigio, como quien busca entretenimiento. Le hace muchas preguntas, pero Jesús guarda silencio. Ante esa respuesta, Herodes lo desprecia y se burla de Él, revistiéndolo con una túnica blanca.",
+      "Herodes, curioso, pero sin compromiso, se alegra de ver a Jesús. Espera divertirse viéndole hacer algún milagro. Jesús guarda silencio ante la palabrería con que Herodes le halaga. Al no tener respuesta, le desprecia, se burla de Él, poniéndole una túnica blanca.",
     prayer:
-      "Señor Jesús, Sabiduría del Padre, ante la vana curiosidad de Herodes guardas silencio. Por Ti los sencillos y humildes contemplaron el poder de Dios. Te agradecemos la lección que nos das, te compadecemos por el ultraje que sufres y te pedimos la gracia de saber hablar y callar oportunamente.",
+      "Jesús, Sabiduría del Padre, ahora guardas silencio. Por ti los sencillos y humildes han visto el poder de Dios y lo han celebrado con gozo grande. Ahora estás cabizbajo. Te agradecemos la lección que nos das, te compadecemos por el ultraje que recibes y te pedimos la gracia de hablar y callar oportunamente.",
   },
   {
     id: "iglesia-6",
@@ -64,9 +64,9 @@ export const stations: Station[] = [
     title: "Sexta Iglesia",
     subtitle: "Jesús condenado por Pilato",
     meditation:
-      "De vuelta con Pilato, este reconoce que Jesús no ha cometido delito alguno y quiere dejarlo libre. Pero claudica ante la presión de quienes han decidido acabar con Él porque su vida y sus enseñanzas les resultan incómodas. Jesús es condenado a morir en la cruz, azotado y coronado con espinas.",
+      "Pilato reconoce que Jesús ni es alborotador ni ha cometido delito alguno de los que le acusan. Como que quiere dejarle libre; pero claudica ante las presiones de los adversarios que han jurado acabar con Jesús porque les resulta incómodo, su conducta y sus enseñanzas chocan con sus intereses. Jesús es condenado a muerte de cruz, flagelado, coronado de espinas.",
     prayer:
-      "Señor Jesús, te compadecemos por las injusticias de este proceso en el que también nosotros metimos las manos. Compadecemos en Ti a todos los que por ser fieles a la verdad y a la causa de Dios son tratados injustamente. Te pedimos la gracia de la piedad divina ante nuestras propias injusticias.",
+      "Jesús, te compadecemos por las injusticias cometidas en este proceso al que fuiste sometido y en el que nosotros metimos nuestras manos. Compadecemos en Ti a cuantos por ser fieles a la verdad y a la causa de Dios en sus hijos son tratados injustamente. Te pedimos la gracia de la piedad divina ante nuestras injusticias.",
   },
   {
     id: "iglesia-7",
@@ -74,8 +74,8 @@ export const stations: Station[] = [
     title: "Séptima Iglesia",
     subtitle: "Jesús en el Santo Sepulcro",
     meditation:
-      "Jesús ha muerto en la cruz entre dolores indecibles, burlas y desprecios, sintiéndose abandonado hasta por su Padre. Su Madre y los pocos amigos fieles que lo acompañaron no pudieron evitarlo. Unos amigos lo sepultan con piedad. Se han cumplido las Escrituras. Ahora toca esperar al tercer día, porque Él, poderoso en obras y palabras, prometió que resucitaría.",
+      "Jesús ha muerto en la Cruz entre indecibles dolores, burlas, desprecios y abandonado de Dios. La Madre y los amigos que lo han acompañado en estos duros momentos no han podido hacer nada. Unos amigos lo sepultan piadosamente. Se han cumplido las Escrituras. Ahora a esperar el tercer día. Él, el poderoso en obras y palabras, ha dicho que resucitará.",
     prayer:
-      "Señor Jesús, te acompañaremos en silencio durante estos días, esperando que tu Palabra germine en nuestros corazones y contigo resucitemos como hombres y mujeres nuevos. Gracias, Padre Dios, porque Tú siempre escuchaste a tu Hijo y lo resucitaste, vencedor de su muerte y de la nuestra.",
+      "Jesús, te acompañaremos en el silencio estos días, en la espera de que tu palabra germine en nuestros corazones y contigo resucitemos hombres y mujeres nuevos en tu Resurrección. Gracias, Padre Dios, Tú siempre has escuchado a tu Hijo y así, vencedor de su muerte y de la nuestra, lo has resucitado.",
   },
 ];

@@ -6,8 +6,7 @@ export function ClosingReflection() {
       <div className="mx-auto max-w-3xl text-center">
         <CrossIcon className="ornament-cross mx-auto mb-6 h-6 w-6" />
         <p className="mx-auto max-w-2xl font-display text-xl font-light italic leading-relaxed text-[var(--color-warm-gray)] md:text-2xl">
-          «Velen y oren para no caer en tentación; el espíritu está dispuesto,
-          pero la carne es débil.»
+          «Estén prevenidos y oren para no caer en tentación, porque el espíritu está dispuesto, pero la carne es débil»
         </p>
         <p className="mt-4 font-display text-base font-light text-[var(--color-warm-gray)]">
           — Mt 26, 41
