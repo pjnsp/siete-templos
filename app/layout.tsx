@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Crimson_Pro } from "next/font/google";
+import Script from "next/script";
+import { env } from "@/lib/env";
 import "./globals.css";
 
 const cormorantGaramond = Cormorant_Garamond({
@@ -30,7 +32,25 @@ export default function RootLayout({
       lang="es"
       className={`${cormorantGaramond.variable} ${crimsonPro.variable} antialiased`}
     >
-      <body className="min-h-full">{children}</body>
+      <body className="min-h-full">
+        {env.ENVIRONMENT === "production" ? (
+          <>
+            <Script
+              src="https://www.googletagmanager.com/gtag/js?id=G-EDT35HBG00"
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-EDT35HBG00');
+          `}
+            </Script>
+          </>
+        ) : null}
+        {children}
+      </body>
     </html>
   );
 }
