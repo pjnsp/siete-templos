@@ -96,6 +96,14 @@ body {
   color: var(--color-warm-gray);
 }
 
+.station-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: var(--color-cream);
+  padding-block: 0.35rem 0.5rem;
+}
+
 .label-meditation {
   font-family: var(--font-display);
   font-weight: 600;
