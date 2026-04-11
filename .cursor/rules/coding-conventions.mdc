@@ -1,0 +1,11 @@
+---
+alwaysApply: true
+---
+
+Rules:
+- Prefer components when possible
+- Do not write comments if you can write good variable and function names
+- Keep it functional, prefer .map and .reduce over for loops when possible
+- Seldom use traditional for loops
+- Never use .forEach
+- Run linting after changes
