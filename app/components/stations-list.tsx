@@ -7,7 +7,7 @@ export function StationsList({ stations }: { stations: Station[] }) {
         <div key={station.id}>
           <article id={station.id} className="station px-6 py-16 md:px-12 lg:px-20">
             <div className="mx-auto max-w-3xl">
-              <div className="mb-8 flex items-start gap-5">
+              <div className="station-header mb-8 flex items-start gap-5">
                 <span className="station-numeral">{station.numeral}</span>
                 <div className="pt-2">
                   <h2 className="station-title">{station.title}</h2>
